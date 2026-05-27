@@ -1,7 +1,5 @@
 import logic.*;
 
-
-
 public class Main {
     public static void main(String[] args) {
         System.out.println("Creating Three objects , one with exceptions \n");
@@ -30,12 +28,16 @@ public class Main {
             System.out.println("Reason : Out of stock");
             order.setStatus(OrderStatus.CANCELLED);
         };
+
         System.out.println("Processing valid orders \n");
         proccessValidOrder.process(orderOne);
         proccessValidOrder.process(orderTwo);
 
         System.out.println("\nCancelling an order \n");
         cancelOrder.process(orderOne);
+
+        System.out.println(orderOne.toString());
+        System.out.println(orderTwo.toString());
 
 
     }
